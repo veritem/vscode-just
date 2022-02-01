@@ -1,6 +1,6 @@
-bt='0'
+bt:='0'
 
-export RUST_BACKTRACE=bt
+export RUST_BACKTRACE:=bt
 
 test: build
 	cargo test
@@ -29,7 +29,7 @@ check:
 watch COMMAND='test':
 	cargo watch {{COMMAND}}
 
-version = `sed -En 's/version[[:space:]]*=[[:space:]]*"([^"]+)"/v\1/p' Cargo.toml`
+version := `sed -En 's/version[[:space:]]*=[[:space:]]*"([^"]+)"/v\1/p' Cargo.toml`
 
 # publish to crates.io
 publish: lint clippy test
@@ -100,7 +100,7 @@ quine:
 	rm -r tmp
 	@echo 'It was a quine!'
 
-quine-text = '
+quine-text := '
 	int printf(const char*, ...);
 
 	int main() {
