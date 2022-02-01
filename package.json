@@ -2,7 +2,7 @@
   "name": "justfile",
   "displayName": "justfile",
   "description": "Provides syntax and recipe launcher for Just scripts.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "publisher": "sclu1034",
   "private": true,
   "license": "MIT",
