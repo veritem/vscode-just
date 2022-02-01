@@ -33,7 +33,7 @@
             "patterns": [
                 {
                     "name": "markup.fenced_code.block.just",
-                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(python\\d+?(?:\\.\\d+)?)(?:\\s|$)",
+                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(python(?:-?\\d+(?:\\.\\d+)?)?)(?:\\s|$)",
                     "end": "^$",
                     "beginCaptures": {
                         "1": { "name": "comment.line.shebang.just" },
@@ -78,7 +78,7 @@
             "patterns": [
                 {
                     "name": "markup.fenced_code.block.just",
-                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(ruby-?\\d+?(?:\\.\\d+)?)(?:\\s|$)",
+                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(ruby-?(?:-?\\d+(?:\\.\\d+)?)?)(?:\\s|$)",
                     "end": "^$",
                     "beginCaptures": {
                         "1": { "name": "comment.line.shebang.just" },
@@ -93,7 +93,7 @@
             "patterns": [
                 {
                     "name": "markup.fenced_code.block.just",
-                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(lua\\d+?(?:\\.\\d+)?)(?:\\s|$)",
+                    "begin": "^\\s+(#!\\s*(?:/usr)?/bin/(?:env\\s+)?)(lua(?:-?\\d+(?:\\.\\d+)?)?)(?:\\s|$)",
                     "end": "^$",
                     "beginCaptures": {
                         "1": { "name": "comment.line.shebang.just" },
@@ -116,16 +116,18 @@
                     },
                     "contentName": "meta.embedded.block.shellscript",
                     "patterns": [{ "include": "source.shell" }]
+                },
+                {
+                    "name": "markup.inline.raw.just",
+                    "begin": "`",
+                    "end": "`",
+                    "contentName": "meta.embedded.line.shellscript",
+                    "patterns": [{ "include": "source.shell" }]
                 }
             ]
         },
         "strings": {
             "patterns": [
-                {
-                    "name": "string.quoted.triple.just",
-                    "begin": "`",
-                    "end": "`"
-                },
                 {
                     "name": "string.quoted.double.just",
                     "begin": "\"",
