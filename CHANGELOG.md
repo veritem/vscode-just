@@ -1,3 +1,12 @@
+# 2.1.0 - Feb 1, 2022
+
+* Fix outdated file syntax
+* Add embedded language syntax highlight
+
+# 2.0.0 - Dec 7, 2017
+
+* Add recipe launcher
+
 # 1.0.3 - Dec 4, 2017
 
 ### Docs
